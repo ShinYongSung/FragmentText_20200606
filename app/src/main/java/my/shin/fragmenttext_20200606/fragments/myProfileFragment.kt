@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_my_profile.*
 import my.shin.fragmenttext_20200606.R
 
-class myProfileFragment : Fragment() {
+class myProfileFragment : BaseFragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -19,6 +19,14 @@ class myProfileFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_my_profile, container, false)
+
+    }
+
+    override fun setupEvents() {
+
+    }
+
+    override fun setValues() {
 
     }
 

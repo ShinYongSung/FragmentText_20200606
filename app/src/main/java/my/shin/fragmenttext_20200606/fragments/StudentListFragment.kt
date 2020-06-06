@@ -11,7 +11,7 @@ import my.shin.fragmenttext_20200606.R
 import my.shin.fragmenttext_20200606.adapters.StudentAdapter
 import my.shin.fragmenttext_20200606.datas.Student
 
-class StudentListFragment : Fragment() {
+class StudentListFragment : BaseFragment() {
 
     val studentlist = ArrayList<Student>()
 
@@ -28,6 +28,16 @@ class StudentListFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        setupEvents()
+        setValues()
+
+    }
+
+    override fun setupEvents() {
+
+    }
+
+    override fun setValues() {
 
         studentlist.add(Student("조경진", 1988, true))
         studentlist.add(Student("김광철", 1966, true))
@@ -41,4 +51,6 @@ class StudentListFragment : Fragment() {
         mStudentAdapter = StudentAdapter(activity as Context, R.layout.student_list_item, studentlist)
         studentListView.adapter = mStudentAdapter
     }
+
+
 }
