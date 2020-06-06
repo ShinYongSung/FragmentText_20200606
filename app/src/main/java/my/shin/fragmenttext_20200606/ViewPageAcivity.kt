@@ -3,6 +3,7 @@ package my.shin.fragmenttext_20200606
 import android.os.Bundle
 import androidx.fragment.app.FragmentPagerAdapter
 import kotlinx.android.synthetic.main.activity_main.*
+import my.shin.fragmenttext_20200606.adapters.MyViewPagerAdapter
 
 class ViewPagerActivity : BaseActivity() {
 
@@ -10,13 +11,18 @@ class ViewPagerActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_view_pager2)
+        setContentView(R.layout.activity_main)
     }
 
-    override fun setupEvent() {
+    override fun setupEvents() {
+
     }
 
     override fun setValues() {
-        myAdapter = myViewPagerAdapter(supportFragmentManager)
-        ViewPager.adapter = myAdapter
+        myAdapter = MyViewPagerAdapter(supportFragmentManager)
+        myViewPager.adapter = myAdapter
     }
+
+}
+
+

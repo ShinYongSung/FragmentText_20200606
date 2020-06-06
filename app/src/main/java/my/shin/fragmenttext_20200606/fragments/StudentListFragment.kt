@@ -4,9 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import my.shin.fragmenttext_20200606.R
 
-class StudentListFragment {
+class StudentListFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -19,6 +20,5 @@ class StudentListFragment {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-
-
+    }
 }

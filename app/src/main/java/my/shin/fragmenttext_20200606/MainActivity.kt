@@ -1,6 +1,7 @@
 package my.shin.fragmenttext_20200606
 
 import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_main.*
 import my.shin.fragmenttext_20200606.adapters.MyViewPagerAdapter
 
 class MainActivity : BaseActivity() {
@@ -20,7 +21,7 @@ class MainActivity : BaseActivity() {
 
     override fun setValues() {
         mainAdapter = MyViewPagerAdapter(supportFragmentManager)
-        MyViewPagerAdapter.apaters = mainAdapter
+        myViewPager.adapter = mainAdapter
 
     }
 
