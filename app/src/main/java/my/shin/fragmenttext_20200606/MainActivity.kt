@@ -20,7 +20,7 @@ class MainActivity : BaseActivity() {
 
     override fun setValues() {
         mainAdapter = MyViewPagerAdapter(supportFragmentManager)
-        MyViewPagerAdapter.adapter = mainAdapter
+        MyViewPagerAdapter.apaters = mainAdapter
 
     }
 
