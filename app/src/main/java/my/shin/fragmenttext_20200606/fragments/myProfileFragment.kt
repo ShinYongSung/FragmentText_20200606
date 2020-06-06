@@ -22,17 +22,14 @@ class myProfileFragment : BaseFragment() {
 
     }
 
-    override fun setupEvents() {
-
-    }
-
-    override fun setValues() {
-
-    }
-
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        setupEvents()
+        setValues()
 
+    }
+
+    override fun setupEvents() {
         dialBtn.setOnClickListener{
             val inputPhoneNum = phoneNumEdt.text.toString()
 
@@ -41,4 +38,10 @@ class myProfileFragment : BaseFragment() {
             startActivity(myIntent)
         }
     }
+
+    override fun setValues() {
+
+    }
+
+
 }
